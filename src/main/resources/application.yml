@@ -1,0 +1,25 @@
+app:
+  azure:
+    connectionString: ${AZURE_STORAGE_CONNECTION_STRING}
+  storage:
+    templatesContainer: templates
+    outputContainer: output
+    workDir: out/work
+  libreOffice:
+    sofficePath: ${SOFFICE_PATH:/usr/bin/soffice}
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+logging:
+  level:
+    org.springdoc: DEBUG
+    org.springframework.web: DEBUG
+
